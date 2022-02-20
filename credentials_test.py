@@ -24,4 +24,16 @@ class TestUser(unittest.TestCase):
 
         self.assertEqual(self.new_credentials.platform_name, "Instagram")
         self.assertEqual(self.new_credentials.platform_user_name, "PUBG")
-        self.assertEqual(self.new_credentials.platform_user_password, "997654")    
+        self.assertEqual(self.new_credentials.platform_user_password, "997654")   
+
+
+    def test_save_credentials(self):
+        """
+        Test whether the credential object is saved in the cedential list
+        """
+
+        self.new_credentials.save_credentials()
+        self.assertEqual(len(Credentials.credential_requirements),1) 
+
+        
+            
