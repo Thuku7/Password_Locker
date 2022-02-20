@@ -3,7 +3,7 @@ class Credentials:
     class that generates an instance of credentials
     """
 
-    Credential_requirments = []
+    credential_requirments = []
 
 
     def __init__(self,social_name,social_user_name,social_user_password):
@@ -26,4 +26,13 @@ class Credentials:
         Function that will delete a users credential
         """ 
 
-        Credentials.credential_requirements.remove(self)       
+        Credentials.credential_requirements.remove(self)   
+
+
+    @classmethod
+    def dispaly_credentials(cls):
+        """
+        returns the credential list
+        """ 
+
+        return cls.credential_requirements       

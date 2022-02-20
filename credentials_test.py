@@ -53,6 +53,15 @@ class TestUser(unittest.TestCase):
         self.new_credentials.save_credentials()
         test_credential = Credentials("instagram", "Brady", "09876")
         test_credential.save_credentials()
-        self.assertEqual(len(Credentials.credential_requirements), 2)    
+        self.assertEqual(len(Credentials.credential_requirements), 2)  
+
+
+    def test_display_all_credentials(self):
+
+        """
+        Test whether all credentials are displayed back to user
+        """
+
+        self.assertEqual(Credentials.display_credentials(), Credentials.credential_requirements)      
 
           
