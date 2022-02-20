@@ -19,4 +19,11 @@ class Credentials:
 
         """
 
-        Credentials.credential_requirements.append(self)    
+        Credentials.credential_requirements.append(self)
+
+    def delete_credentials(self):
+        """
+        Function that will delete a users credential
+        """ 
+
+        Credentials.credential_requirements.remove(self)       
