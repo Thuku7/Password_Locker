@@ -29,4 +29,15 @@ class User:
 
         return cls.user_list
 
-        
+
+    @classmethod
+    def display_users(cls,username):
+      """
+      Method that takes in a name and returns a user that matches the username
+
+      """
+
+      for user in cls.user_list:
+        if user.first_name == username:
+          return user
+
