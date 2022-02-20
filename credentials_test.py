@@ -13,8 +13,15 @@ class TestUser(unittest.TestCase):
         set up the method that will run before each test case
         
         """
-        self.new_credentials = Credentials("Instagram", "PUGb","987654")
+        self.new_credentials = Credentials("Instagram", "PUBG","987654")
 
 
 
-    def     
+    def test_init(self):
+        '''
+        test that the credential object is initialised as expected
+        '''
+
+        self.assertEqual(self.new_credentials.platform_name, "Instagram")
+        self.assertEqual(self.new_credentials.platform_user_name, "PUBG")
+        self.assertEqual(self.new_credentials.platform_user_password, "997654")    
