@@ -31,13 +31,16 @@ class User:
 
 
     @classmethod
-    def display_users(cls,username):
-      """
-      Method that takes in a name and returns a user that matches the username
+    def find_by_username(cls, username):
+        '''
+        Method that takes in a number and returns a user that matches the username
+        
+        Args: 
+            username: username object that matches the username
+        Returns:
+            User that matches the username
+        '''
 
-      """
-
-      for user in cls.user_list:
-        if user.first_name == username:
-          return user
-
+        for user in cls.user_list:
+            if user.first_name == username:
+                return user
