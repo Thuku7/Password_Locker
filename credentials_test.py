@@ -42,4 +42,17 @@ class TestUser(unittest.TestCase):
         Tear down method that cleans up after each test case has run
         '''
 
-        Credentials.credential_requirements = []        
+        Credentials.credential_requirements = []
+
+
+    def test_Save_multiple_credentials(self):
+        '''
+        Test to check whether we can save multiple credentials to the array
+        '''
+
+        self.new_credentials.save_credentials()
+        test_credential = Credentials("instagram", "Brady", "09876")
+        test_credential.save_credentials()
+        self.assertEqual(len(Credentials.credential_requirements), 2)    
+
+          
