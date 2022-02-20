@@ -11,3 +11,22 @@ class User:
         self.first_name = first_name
         self.last_name = last_name
         self.password = password
+
+
+    def save_user(self):
+        """
+        save_user method saves a user object into a user_array
+        
+        """  
+        User.user_list.append(self)  
+
+
+    @classmethod
+    def display_users(cls):
+        """
+        Function that returns the user_list array
+        """
+
+        return cls.user_list
+
+        
